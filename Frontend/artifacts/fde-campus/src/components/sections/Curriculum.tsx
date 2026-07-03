@@ -329,8 +329,8 @@ const badgeColors: Record<string, string> = {
 type Tab = 'senior' | 'junior' | 'architect';
 
 const tabs: { id: Tab; label: string; subtitle: string; modules: typeof seniorModules }[] = [
-  { id: 'senior', label: 'Senior FDE', subtitle: '8-Module Masterclass · 9 months', modules: seniorModules },
   { id: 'junior', label: 'Junior FDE', subtitle: '6-Module Intensive · 6 months', modules: juniorModules },
+  { id: 'senior', label: 'Senior FDE', subtitle: '8-Module Masterclass · 9 months', modules: seniorModules },
   { id: 'architect', label: 'Solutions Architect', subtitle: '5-Module Elite Track · 12 months', modules: architectModules },
 ];
 
