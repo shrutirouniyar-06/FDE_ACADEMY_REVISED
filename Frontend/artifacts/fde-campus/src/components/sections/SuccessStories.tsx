@@ -31,9 +31,9 @@ export function SuccessStories() {
           >
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
             <img 
-              src="/attached_assets/generated_images/mentor-5.jpg" 
+              src="/images/hero-visual.jpg" 
               alt="Video Thumbnail" 
-              className="w-full h-full object-cover aspect-video lg:aspect-auto group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover aspect-video lg:aspect-auto group-hover:scale-105 transition-transform duration-700 min-h-[320px]"
             />
             
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center">

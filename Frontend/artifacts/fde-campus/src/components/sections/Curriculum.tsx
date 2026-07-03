@@ -466,7 +466,7 @@ export function Curriculum() {
                 "flex-1 text-left px-5 py-4 rounded-xl font-semibold transition-all duration-300",
                 activeTab === tab.id
                   ? "bg-primary text-white shadow-[0_0_20px_rgba(229,106,26,0.3)]"
-                  : "text-muted-foreground hover:text-white hover:bg-white/5"
+                  : "text-muted-foreground hover:text-foreground hover:bg-white/5"
               )}
             >
               <div className="font-display font-bold">{tab.label}</div>
