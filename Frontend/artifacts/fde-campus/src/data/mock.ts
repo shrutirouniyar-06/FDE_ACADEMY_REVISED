@@ -132,28 +132,28 @@ export const PROJECTS = [
 export const SUCCESS_STORIES = [
   {
     name: 'Shruti Rouniyar',
-    role: 'Senior FDE @ Infosys',
+    role: 'Junior FDE @ GlobalLogic',
     previousRole: 'Backend Engineer',
     quote: 'The FDE program gave me the language to speak business and the tools to build AI systems. Joined as a backend engineer, now leading AI transformation.',
     avatar: '/images/mentor-1.jpg'
   },
   {
     name: 'Semanti Das',
-    role: 'AI Solutions Architect @ TCS',
+    role: 'Junior FDE @ GlobalLogic',
     previousRole: 'Data Scientist',
     quote: 'Moving from model building to solving actual business problems was the hardest leap. FDE Academy provided the exact bridge I needed.',
     avatar: '/images/mentor-2.jpg'
   },
   {
     name: 'Pankaj L Venkat',
-    role: 'Principal Engineer @ Deloitte',
+    role: 'Junior FDE @ GlobalLogic',
     previousRole: 'Full Stack Developer',
     quote: 'The emphasis on executive communication and ROI-driven engineering completely changed the trajectory of my career. Highly recommended.',
     avatar: '/images/mentor-3.jpg'
   },
   {
     name: 'Rohan Urmude',
-    role: 'FDE Lead @ McKinsey',
+    role: 'Junior FDE @ GlobalLogic',
     previousRole: 'Cloud Engineer',
     quote: 'I learned how to not just build architecture, but to sell the vision to stakeholders. That is the true superpower of an FDE.',
     avatar: '/images/mentor-4.jpg'
