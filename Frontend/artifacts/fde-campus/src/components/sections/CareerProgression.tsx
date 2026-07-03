@@ -10,7 +10,7 @@ export function CareerProgression() {
 
   const stages = [
     {
-      title: "FDE",
+      title: "Junior FDE",
       timeline: "0-2 years",
       role: "Core engineering + client delivery",
       responsibilities: ["Build AI pipelines", "Support client deployments", "Model fine-tuning", "Technical documentation"]
@@ -19,7 +19,7 @@ export function CareerProgression() {
       title: "Senior FDE",
       timeline: "2-5 years",
       role: "Lead solutions + team mentoring",
-      responsibilities: ["Solution architecture", "Client advisory", "Mentor junior FDEs", "ROI measurement"]
+      responsibilities: ["Solution architecture", "Client advisory", "Mentor Junior FDEs", "ROI measurement"]
     },
     {
       title: "Principal FDE",
@@ -44,7 +44,7 @@ export function CareerProgression() {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <h2 className="text-primary font-semibold tracking-wide uppercase mb-3">Career Progression</h2>
-          <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">The FDE Trajectory</h3>
+          <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">The Junior FDE Trajectory</h3>
           <p className="text-xl text-muted-foreground">A clear path from hands-on engineering to executive leadership.</p>
         </motion.div>
 
