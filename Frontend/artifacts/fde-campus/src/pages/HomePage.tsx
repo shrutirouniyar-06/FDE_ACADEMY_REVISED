@@ -6,7 +6,6 @@ import { WhatIsFDE } from '@/components/sections/WhatIsFDE';
 import { IndustryChallenge } from '@/components/sections/IndustryChallenge';
 import { CareerProgression } from '@/components/sections/CareerProgression';
 import { ProgramsSection } from '@/components/sections/Programs';
-import { ProgramComparison } from '@/components/sections/ProgramComparison';
 import { Curriculum } from '@/components/sections/Curriculum';
 import { CapabilityPillars } from '@/components/sections/CapabilityPillars';
 import { LearningActivities } from '@/components/sections/LearningActivities';
@@ -36,7 +35,6 @@ export function HomePage() {
         <IndustryChallenge />
         <CareerProgression />
         <ProgramsSection />
-        <ProgramComparison />
         <Curriculum />
         <SignatureActivities />
         <BusinessImpact />
