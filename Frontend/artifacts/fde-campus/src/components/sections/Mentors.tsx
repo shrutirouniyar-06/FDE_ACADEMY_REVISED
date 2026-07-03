@@ -102,7 +102,7 @@ export function Mentors() {
                         className="w-11 h-11 rounded-full bg-white flex items-center justify-center hover:scale-110 shadow-lg transition-all duration-300 p-2"
                         aria-label={`${mentor.name}'s Glo profile`}
                       >
-                        <img src="/images/gl-logo.png" alt="GlobalLogic" className="w-full h-full object-contain" />
+                        <img src="/images/glo-logo.svg" alt="Glo" className="w-full h-full object-contain" />
                       </a>
                     </div>
                     
