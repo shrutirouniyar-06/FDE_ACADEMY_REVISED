@@ -42,7 +42,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20 pb-28"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20 pb-28 bg-[#0F0F10]"
     >
 
       {/* ─── Background ─── */}
@@ -127,10 +127,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.9 }}
-            className="text-xl md:text-2xl text-white/55 leading-relaxed max-w-xl"
+            className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-xl"
           >
             Bridge the gap between business strategy and AI engineering.&nbsp;
-            <span className="text-white/80">Lead transformations that matter.</span>
+            <span className="text-white/90">Lead transformations that matter.</span>
           </motion.p>
 
           {/* CTAs */}
