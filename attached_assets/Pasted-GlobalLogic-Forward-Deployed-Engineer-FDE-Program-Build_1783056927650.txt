@@ -1,0 +1,55 @@
+GlobalLogic Forward Deployed Engineer (FDE) Program
+Building AI-Native client-ready Engineering Workforce
+
+The Industry Challenge
+Organizations across industries are investing significantly in Artificial Intelligence. While experimentation is widespread, many struggle to translate AI pilots into scalable business outcomes. The challenge is no longer access to technology—it is the availability of talent capable of connecting business needs with AI-driven execution.
+Today's enterprises require professionals who can:
+Understand customer and business challenges
+Identify high-value AI use cases
+Design and architect AI-powered solutions
+Rapidly build, deploy, and iterate solutions
+Communicate effectively with business stakeholders
+Drive adoption, change management, and measurable value realization
+This emerging talent profile is embodied by the Forward Deployed Engineer (FDE)—a next-generation professional who combines engineering excellence, AI fluency, cloud expertise, product thinking, and consulting capabilities.
+
+Strategic Vision
+To develop AI-native, client-ready professionals who can bridge business, technology, and delivery by integrating expertise across AI, cloud, engineering, and consulting disciplines.
+The FDE program is designed to create practitioners who can move seamlessly from problem discovery to solution deployment, enabling faster innovation, stronger client partnerships, and measurable business impact.
+
+Building the FDE Capability
+The inaugural FDE cohort was designed as an immersive, hands-on learning experience focused on developing both technical depth and business acumen.
+The curriculum was structured around four key capability pillars:
+AI and GenAI Foundations
+Cloud and Modern Engineering Practices
+Solution Design and Architecture
+Consulting, Communication, and Customer Engagement
+Beyond classroom learning, participants engaged in a series of experiential activities designed to simulate real-world client environments and business challenges.
+
+6-Week FDE Journey
+Signature Activities 
+
+
+
+Pilot Cohort Snapshot
+
+
+Expected Business Impact
+As these professionals are deployed into client engagements and strategic initiatives, they are expected to:
+Accelerate AI-led transformation programs
+Improve speed from idea to implementation
+Enhance customer engagement and solution co-creation
+Drive innovation within delivery teams
+Improve adoption of AI-powered solutions
+Create reusable assets, accelerators, and best practices
+Strengthen our positioning as an AI-first organization
+
+Role of Delivery Leaders
+The success of the FDE initiative will depend not only on the capability of the participants but also on how effectively business and delivery leaders leverage this talent.
+We encourage leaders to:
+Identify high-value business problems suitable for FDE engagement
+Embed FDEs within strategic client programs and transformation initiatives
+Provide opportunities for direct stakeholder and customer interaction
+Encourage experimentation with measurable business outcomes
+Sponsor innovation initiatives that can benefit from AI-led approaches
+Create pathways for FDEs to influence solutioning, consulting, and delivery decisions
+The first FDE cohort represents an important step in building our AI-first workforce. With active sponsorship from business and delivery leaders, these professionals can become catalysts for innovation, transformation, and client value creation across the organization.

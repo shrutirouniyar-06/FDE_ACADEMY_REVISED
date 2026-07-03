@@ -48,10 +48,11 @@ export function Stats() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   const stats = [
-    { end: 500, suffix: '+', label: 'Students Trained' },
-    { end: 40,  suffix: '+', label: 'Expert Mentors' },
-    { end: 120, suffix: '+', label: 'Live Projects' },
-    { end: 94,  suffix: '%', label: 'Success Rate' },
+    { end: 20,  suffix: '',   label: 'Participants' },
+    { end: 6,   suffix: '',   label: 'Weeks' },
+    { end: 140, suffix: '+',  label: 'Hrs of Hands-on Challenges' },
+    { end: 6,   suffix: '',   label: 'Major Use Cases' },
+    { end: 1,   suffix: '',   label: 'Capstone Simulation' },
   ];
 
   return (
@@ -65,7 +66,11 @@ export function Stats() {
       />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
+        <div className="text-center mb-12">
+          <p className="text-xs font-bold uppercase tracking-widest text-primary mb-2">Pilot Cohort Snapshot</p>
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-white">By the Numbers</h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 md:gap-8">
           {stats.map((stat, i) => (
             <StatItem
               key={i}

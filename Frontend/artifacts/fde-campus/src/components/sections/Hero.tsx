@@ -202,8 +202,8 @@ export function Hero() {
               className="absolute top-6 left-6 glass-card px-4 py-3 rounded-xl text-sm animate-float"
               style={{ animationDelay: '0.5s' }}
             >
-              <p className="text-white/60 text-xs mb-0.5">Success rate</p>
-              <p className="text-white font-bold text-xl">94<span className="text-primary">%</span></p>
+              <p className="text-white/60 text-xs mb-0.5">Participants</p>
+              <p className="text-white font-bold text-xl">20</p>
             </motion.div>
 
             <motion.div
@@ -213,8 +213,8 @@ export function Hero() {
               className="absolute top-6 right-6 glass-card px-4 py-3 rounded-xl text-sm animate-float"
               style={{ animationDelay: '1.2s' }}
             >
-              <p className="text-white/60 text-xs mb-0.5">Expert mentors</p>
-              <p className="text-white font-bold text-xl">40<span className="text-primary">+</span></p>
+              <p className="text-white/60 text-xs mb-0.5">Hrs Hands-on</p>
+              <p className="text-white font-bold text-xl">140<span className="text-primary">+</span></p>
             </motion.div>
 
             {/* Bottom CTA card */}
