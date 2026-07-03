@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight, Linkedin, Mail } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Mail } from 'lucide-react';
 import { MENTORS } from '@/data/mock';
 
 export function Mentors() {
@@ -95,9 +95,15 @@ export function Mentors() {
                       >
                         <Mail className="w-4 h-4" />
                       </a>
-                      <button className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white hover:scale-110 hover:bg-primary/90 shadow-lg transition-all duration-300">
-                        <Linkedin className="w-5 h-5 fill-current" />
-                      </button>
+                      <a
+                        href={mentor.gloProfile}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white hover:scale-110 hover:bg-primary/90 shadow-lg transition-all duration-300"
+                        aria-label={`${mentor.name}'s Glo profile`}
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
                     </div>
                     
                     <h4 className="text-2xl font-display font-bold text-white mb-1 group-hover:text-primary transition-colors duration-300">{mentor.name}</h4>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Hero } from '@/components/sections/Hero';
 import { Stats } from '@/components/sections/Stats';
 import { WhyFDE } from '@/components/sections/WhyFDE';
@@ -6,7 +7,7 @@ import { WhatIsFDE } from '@/components/sections/WhatIsFDE';
 import { IndustryChallenge } from '@/components/sections/IndustryChallenge';
 import { CareerProgression } from '@/components/sections/CareerProgression';
 import { ProgramsSection } from '@/components/sections/Programs';
-import { Curriculum } from '@/components/sections/Curriculum';
+import { Curriculum, type Tab } from '@/components/sections/Curriculum';
 import { CapabilityPillars } from '@/components/sections/CapabilityPillars';
 import { LearningActivities } from '@/components/sections/LearningActivities';
 import { Mentors } from '@/components/sections/Mentors';
@@ -23,6 +24,9 @@ import { BusinessImpact } from '@/components/sections/BusinessImpact';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 export function HomePage() {
+  const [curriculumOpen, setCurriculumOpen] = useState(false);
+  const [curriculumTab, setCurriculumTab] = useState<Tab>('senior');
+
   return (
     <>
       <Navbar />
@@ -34,8 +38,13 @@ export function HomePage() {
         <WhatIsFDE />
         <IndustryChallenge />
         <CareerProgression />
-        <ProgramsSection />
-        <Curriculum />
+        <ProgramsSection
+          onViewCurriculum={(tab) => {
+            setCurriculumTab(tab);
+            setCurriculumOpen(true);
+          }}
+        />
+        <Curriculum open={curriculumOpen} activeTab={curriculumTab} />
         <SignatureActivities />
         <BusinessImpact />
         <CapabilityPillars />

@@ -4,8 +4,19 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { PROGRAMS } from '@/data/mock';
 import { Link } from 'wouter';
 import { TiltCard } from '@/components/ui/tilt-card';
+import type { Tab } from '@/components/sections/Curriculum';
 
-export function ProgramsSection() {
+const PROGRAM_TAB_MAP: Record<string, Tab> = {
+  'junior-fde': 'junior',
+  'senior-fde': 'senior',
+  'solutions-architect': 'architect',
+};
+
+interface ProgramsSectionProps {
+  onViewCurriculum?: (tab: Tab) => void;
+}
+
+export function ProgramsSection({ onViewCurriculum }: ProgramsSectionProps = {}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -69,17 +80,34 @@ export function ProgramsSection() {
               </div>
 
               <div className="mt-8 pt-8 border-t border-border/50">
-                <Link 
-                  href={prog.link}
-                  className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95
-                    ${prog.recommended
-                      ? 'bg-primary text-white hover:bg-primary/90 hover:gap-3'
-                      : 'bg-white/10 text-white hover:bg-primary hover:text-white hover:gap-3'
-                    }`}
-                >
-                  View Curriculum
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                {onViewCurriculum ? (
+                  <button
+                    onClick={() => {
+                      onViewCurriculum(PROGRAM_TAB_MAP[prog.id]);
+                      document.getElementById('curriculum')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95
+                      ${prog.recommended
+                        ? 'bg-primary text-white hover:bg-primary/90 hover:gap-3'
+                        : 'bg-white/10 text-white hover:bg-primary hover:text-white hover:gap-3'
+                      }`}
+                  >
+                    View Curriculum
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </button>
+                ) : (
+                  <Link 
+                    href={prog.link}
+                    className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-95
+                      ${prog.recommended
+                        ? 'bg-primary text-white hover:bg-primary/90 hover:gap-3'
+                        : 'bg-white/10 text-white hover:bg-primary hover:text-white hover:gap-3'
+                      }`}
+                  >
+                    View Curriculum
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                )}
               </div>
             </TiltCard>
             </motion.div>

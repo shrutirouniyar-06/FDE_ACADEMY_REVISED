@@ -6,7 +6,8 @@ export const MENTORS = [
     experience: '15+ years',
     description: 'Enterprise L&D & Talent Leader building leadership pipelines and technical capability at scale, with a strong focus on succession planning.',
     expertise: ['Leadership Development', 'Talent Strategy', 'Succession Planning'],
-    email: 'nisha.mukherjee@globallogic.com'
+    email: 'nisha.mukherjee@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/nisha.mukherjee'
   },
   {
     id: '2',
@@ -15,7 +16,8 @@ export const MENTORS = [
     experience: '12+ years',
     description: 'People Development Lead at GlobalLogic contributing to leadership and organizational development strategies, with expertise in competency mapping, assessments, and 360-degree feedback. Certified in Thomas Personal Profile Analysis and Competency Mapping.',
     expertise: ['Competency Mapping', 'Talent Development', 'Team Performance'],
-    email: 'chitrangda.visen@globallogic.com'
+    email: 'chitrangda.visen@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/chitrangda.visen'
   },
   {
     id: '3',
@@ -24,7 +26,8 @@ export const MENTORS = [
     experience: '10+ years',
     description: 'AI & DevOps Specialist with over 10 years of experience in Cloud, DevOps, Generative AI, and Enterprise Technology Enablement. Designs experiential learning programs across AWS, Google Cloud, Kubernetes, Terraform, CI/CD, and AI-driven development, with a current focus on Agentic AI and AI engineering workflows.',
     expertise: ['Cloud & DevOps', 'Generative AI', 'Enterprise Enablement'],
-    email: 'sai.dabbiru@globallogic.com'
+    email: 'sai.dabbiru@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/sai.dabbiru'
   },
   {
     id: '4',
@@ -33,7 +36,8 @@ export const MENTORS = [
     experience: '11+ years',
     description: 'Seasoned Technology Lead specializing in UI and Cloud technologies with an AI-driven innovation focus. Leads the UI track, shaping strategy, content, and delivery while designing architect-level courses and client interview readiness programs.',
     expertise: ['UI Engineering', 'Cloud Technologies', 'AI-Integrated Learning'],
-    email: 'krishna.c@globallogic.com'
+    email: 'krishna.c@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/krishna.c'
   },
   {
     id: '5',
@@ -42,7 +46,8 @@ export const MENTORS = [
     experience: '7+ years',
     description: 'AI Track Lead driving Agentic AI, Gen AI & LLM transformation, with a focus on AI strategy, adoption, governance, and upskilling across AWS & Oracle AI. Also an experienced L&D specialist.',
     expertise: ['Agentic AI', 'AI Strategy & Governance', 'L&D'],
-    email: 'asfiya.khan@globallogic.com'
+    email: 'asfiya.khan@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/asfiya.khan'
   },
   {
     id: '6',
@@ -51,7 +56,8 @@ export const MENTORS = [
     experience: '15+ years',
     description: 'Learning & Development professional helping people communicate better, think differently, and grow with confidence. Has designed and facilitated learning programs for organizations such as Adobe, HCL Technologies, Amity University, WeWork, Capgemini, and LeadSquared. A published author with MBD and Macmillan.',
     expertise: ['Learning Design', 'Facilitation', 'Communication Coaching'],
-    email: 'raksha.bahadur@globallogic.com'
+    email: 'raksha.bahadur@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/raksha.bahadur'
   },
   {
     id: '7',
@@ -60,7 +66,8 @@ export const MENTORS = [
     experience: '20+ years',
     description: 'Seasoned professional with extensive experience across consulting and technology, with a strong foundation in blockchain, Web 3.0, and metaverse technologies driving innovation and digital transformation. Previously contributed to strategic initiatives and consulting excellence as Senior Principal Consultant at Infosys.',
     expertise: ['Blockchain & Web3', 'Digital Transformation', 'Consulting'],
-    email: 'kalpana.sp@globallogic.com'
+    email: 'kalpana.sp@globallogic.com',
+    gloProfile: 'https://glo.globallogic.com/users/profile/kalpana.sp'
   }
 ];
 
@@ -124,28 +131,28 @@ export const PROJECTS = [
 
 export const SUCCESS_STORIES = [
   {
-    name: 'Vikram Nair',
+    name: 'Shruti Rouniyar',
     role: 'Senior FDE @ Infosys',
     previousRole: 'Backend Engineer',
     quote: 'The FDE program gave me the language to speak business and the tools to build AI systems. Joined as a backend engineer, now leading AI transformation.',
     avatar: '/images/mentor-1.jpg'
   },
   {
-    name: 'Anita Desai',
+    name: 'Semanti Das',
     role: 'AI Solutions Architect @ TCS',
     previousRole: 'Data Scientist',
     quote: 'Moving from model building to solving actual business problems was the hardest leap. FDE Academy provided the exact bridge I needed.',
     avatar: '/images/mentor-2.jpg'
   },
   {
-    name: 'James Wilson',
+    name: 'Pankaj L Venkat',
     role: 'Principal Engineer @ Deloitte',
     previousRole: 'Full Stack Developer',
     quote: 'The emphasis on executive communication and ROI-driven engineering completely changed the trajectory of my career. Highly recommended.',
     avatar: '/images/mentor-3.jpg'
   },
   {
-    name: 'Sofia Martinez',
+    name: 'Rohan Urmude',
     role: 'FDE Lead @ McKinsey',
     previousRole: 'Cloud Engineer',
     quote: 'I learned how to not just build architecture, but to sell the vision to stakeholders. That is the true superpower of an FDE.',

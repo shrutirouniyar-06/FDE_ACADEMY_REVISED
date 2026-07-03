@@ -22,3 +22,6 @@ localPort = 23623
 externalPort = 80
 
 [workflows]
+
+[deployment]
+deploymentTarget = "cloudrun"

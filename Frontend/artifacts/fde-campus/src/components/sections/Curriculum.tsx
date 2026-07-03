@@ -1,5 +1,5 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { ChevronDown, CheckCircle2, Clock, Users, BookOpen, Code2, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -550,7 +550,7 @@ const badgeColors: Record<string, string> = {
   Capstone:      'bg-primary/30 text-primary border-primary/50',
 };
 
-type Tab = 'senior' | 'junior' | 'architect';
+export type Tab = 'senior' | 'junior' | 'architect';
 
 type BasicModule = { title: string; duration: string; sessions: number | string; desc: string; topics: string[]; outcome: string; badge: string };
 
@@ -784,15 +784,24 @@ function ModuleList({ modules }: { modules: BasicModule[] }) {
   );
 }
 
-export function Curriculum() {
+interface CurriculumProps {
+  open?: boolean;
+  activeTab?: Tab;
+}
+
+export function Curriculum({ open = true, activeTab: controlledTab }: CurriculumProps = {}) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeTab, setActiveTab] = useState<Tab>('senior');
+  const [activeTab, setActiveTab] = useState<Tab>(controlledTab ?? 'senior');
+
+  useEffect(() => {
+    if (controlledTab) setActiveTab(controlledTab);
+  }, [controlledTab]);
 
   const currentTab = tabs.find(t => t.id === activeTab)!;
 
   return (
-    <section ref={ref} className="py-32 bg-background border-t border-border/50">
+    <section id="curriculum" ref={ref} className="py-32 bg-background border-t border-border/50">
       <div className="max-w-4xl mx-auto px-4 md:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -804,45 +813,57 @@ export function Curriculum() {
           <p className="text-xl text-muted-foreground">A rigorous progression from business discovery to production deployment.</p>
         </motion.div>
 
-        {/* Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-2 mb-10 glass-card rounded-2xl p-2"
-        >
-          {tabs.map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={cn(
-                "flex-1 text-left px-5 py-4 rounded-xl font-semibold transition-all duration-300",
-                activeTab === tab.id
-                  ? "bg-primary text-white shadow-[0_0_20px_rgba(229,106,26,0.3)]"
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/5"
-              )}
+        <AnimatePresence initial={false}>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              className="overflow-hidden"
             >
-              <div className="font-display font-bold">{tab.label}</div>
-              <div className={cn("text-xs mt-0.5", activeTab === tab.id ? "text-white/70" : "text-muted-foreground")}>
-                {tab.subtitle}
-              </div>
-            </button>
-          ))}
-        </motion.div>
+              {/* Tabs */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                transition={{ delay: 0.2 }}
+                className="flex flex-col sm:flex-row gap-2 mb-10 glass-card rounded-2xl p-2"
+              >
+                {tabs.map(tab => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={cn(
+                      "flex-1 text-left px-5 py-4 rounded-xl font-semibold transition-all duration-300",
+                      activeTab === tab.id
+                        ? "bg-primary text-white shadow-[0_0_20px_rgba(229,106,26,0.3)]"
+                        : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                    )}
+                  >
+                    <div className="font-display font-bold">{tab.label}</div>
+                    <div className={cn("text-xs mt-0.5", activeTab === tab.id ? "text-white/70" : "text-muted-foreground")}>
+                      {tab.subtitle}
+                    </div>
+                  </button>
+                ))}
+              </motion.div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.3 }}
-          >
-            {activeTab === 'senior'
-              ? <SeniorModuleList />
-              : <ModuleList modules={currentTab.modules!} />
-            }
-          </motion.div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -16 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {activeTab === 'senior'
+                    ? <SeniorModuleList />
+                    : <ModuleList modules={currentTab.modules!} />
+                  }
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          )}
         </AnimatePresence>
       </div>
     </section>
