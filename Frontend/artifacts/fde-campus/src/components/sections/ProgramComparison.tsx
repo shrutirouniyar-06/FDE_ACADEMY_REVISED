@@ -24,7 +24,7 @@ export function ProgramComparison() {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Compare Programs</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">Compare Programs</h2>
           <p className="text-xl text-muted-foreground">Find the right path for your experience level.</p>
         </motion.div>
 

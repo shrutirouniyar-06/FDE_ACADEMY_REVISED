@@ -18,7 +18,7 @@ export function ProgramsSection() {
           className="text-center max-w-3xl mx-auto mb-20"
         >
           <h2 className="text-primary font-semibold tracking-wide uppercase mb-3">Choose Your Path</h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">Built for Every Stage</h3>
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">Built for Every Stage</h3>
           <p className="text-xl text-muted-foreground">From rising engineers to elite enterprise architects, our programs accelerate your trajectory.</p>
         </motion.div>
 
