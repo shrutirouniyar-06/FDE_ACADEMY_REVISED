@@ -3,134 +3,357 @@ import { useRef, useState } from 'react';
 import { ChevronDown, CheckCircle2, Clock, Users, BookOpen, Code2, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const seniorModules = [
+type DayEntry = {
+  title: string;
+  topics: string;
+  skills: string;
+  deliverable: string;
+  outcome: string;
+};
+
+type WeekEntry = {
+  weekNum: number;
+  title: string;
+  badge: string;
+  days: DayEntry[];
+};
+
+const seniorWeeks: WeekEntry[] = [
   {
+    weekNum: 1,
     title: "Customer Discovery, Consulting & Problem Framing",
-    duration: "Week 1",
-    sessions: 5,
-    desc: "Develop the FDE mindset and master the consulting tools that turn ambiguous client situations into clearly defined, high-value AI opportunities.",
-    topics: [
-      "The FDE mindset: thinking like an engineer, consultant, and product owner simultaneously",
-      "Running structured discovery workshops with cross-functional stakeholders",
-      "Problem framing techniques: problem trees, HMW statements, and opportunity maps",
-      "Architecture thinking: connecting business needs to technical solutions",
-      "Executive communication: translating technical findings for the C-suite",
-      "Rapid ROI modeling and feasibility assessment",
-    ],
-    outcome: "Facilitate a live discovery workshop and deliver a validated problem statement with an ROI model to a simulated executive panel.",
     badge: "Foundation",
+    days: [
+      {
+        title: "Understanding the Customer",
+        topics: "FDE Mindset, Consulting Fundamentals, Customer Lifecycle, Stakeholder Mapping, Industry Research, Business Context Analysis",
+        skills: "AI-assisted customer research, stakeholder profiling, discovery planning, business understanding",
+        deliverable: "Customer Briefing Pack — company profile, stakeholder map, industry analysis, competitor analysis, business challenges, assumptions, risks, and 25 AI-generated discovery questions",
+        outcome: "Can analyze a customer organisation, identify key stakeholders, understand business drivers, anticipate challenges, and prepare for customer engagements.",
+      },
+      {
+        title: "Mastering Discovery Conversations",
+        topics: "Discovery Workshops, Requirement Elicitation, Active Listening, Functional & Non-Functional Requirements, Handling Ambiguity",
+        skills: "AI meeting copilot usage, transcript analysis, requirement extraction, summarization",
+        deliverable: "Discovery Report — meeting notes, requirements catalog, assumptions, constraints, dependencies, unresolved questions, stakeholder concerns, and AI-generated insights",
+        outcome: "Can conduct structured discovery sessions, ask effective questions, capture requirements accurately, identify gaps, and uncover hidden needs.",
+      },
+      {
+        title: "Defining the Real Problem",
+        topics: "Problem Framing, Root Cause Analysis, Business Process Mapping, Value Stream Analysis, KPI Definition",
+        skills: "AI-assisted problem decomposition, process analysis, root cause discovery",
+        deliverable: "Problem Definition Document — business objectives, current-state analysis, root causes, process maps, pain points, KPIs, measurable outcomes, risks, and success criteria",
+        outcome: "Can distinguish symptoms from root causes, decompose complex problems, define measurable success criteria, and align technical solutions to business outcomes.",
+      },
+      {
+        title: "Designing Solution Options",
+        topics: "Solution Discovery, Architecture Thinking, Build vs Buy, Technology Evaluation, Tradeoff Analysis",
+        skills: "AI-assisted architecture generation, architecture review, solution comparison",
+        deliverable: "Solution Options Report — 3 architecture approaches, tradeoff analysis, technology recommendations, implementation roadmap, cost estimates, risks, and AI-generated architecture reviews",
+        outcome: "Can evaluate alternative solutions, compare architectures, justify technology choices, estimate effort, and communicate tradeoffs effectively.",
+      },
+      {
+        title: "Influencing Through Communication",
+        topics: "Executive Communication, Proposal Writing, Storytelling, Value Articulation, Stakeholder Management",
+        skills: "AI-assisted proposal creation, executive summary generation, presentation refinement",
+        deliverable: "Executive Proposal & Presentation — business problem, proposed solution, value realization, architecture, roadmap, risk register, budget estimate, and executive summary",
+        outcome: "Can create executive-ready proposals, communicate business value, present recommendations confidently, and handle challenging stakeholder questions.",
+      },
+    ],
   },
   {
-    title: "AI-Native Engineering & Advanced Problem Solving",
-    duration: "Week 2",
-    sessions: 5,
-    desc: "Master AI-assisted development workflows and build production-grade GenAI systems — from RAG pipelines to autonomous agentic workflows.",
-    topics: [
-      "AI-assisted development: GitHub Copilot, Cursor, and AI-native engineering practices",
-      "Retrieval-Augmented Generation (RAG): design, chunking strategies, and evaluation",
-      "Agentic AI workflows: LangGraph, AutoGen, and multi-agent orchestration",
-      "Prompt engineering: chain-of-thought, few-shot, and structured output techniques",
-      "LLM evaluation frameworks: RAGAS, TruLens, and custom domain metrics",
-      "Vector databases and semantic search: Pinecone, Weaviate, pgvector",
-    ],
-    outcome: "Ship a production-grade RAG application connected to a live enterprise data source, with full evaluation instrumentation.",
-    badge: "AI Core",
-  },
-  {
-    title: "Modern Enterprise Architecture & Scalability",
-    duration: "Week 3",
-    sessions: 5,
-    desc: "Design cloud-native, scalable enterprise systems using modern API strategies, data engineering patterns, and security-first principles.",
-    topics: [
-      "Cloud-native architecture on AWS, GCP, and Azure — patterns and trade-offs",
-      "API strategy: REST, GraphQL, gRPC, and event-driven architectures",
-      "Data engineering: lakehouse patterns, streaming pipelines, and feature stores",
-      "Security by design: zero-trust, IAM, and compliance (GDPR, SOC 2)",
-      "Observability: OpenTelemetry, Prometheus, and distributed tracing",
-      "Architecture Decision Records (ADRs) and documentation standards",
-    ],
-    outcome: "Design and defend a full-stack, cloud-native architecture for a real enterprise scenario, including security and observability layers.",
+    weekNum: 2,
+    title: "Solution Architecture, Technical Consulting & AI-Assisted Solution Design",
     badge: "Technical",
+    days: [
+      {
+        title: "From Requirements to Architecture",
+        topics: "Requirement Analysis, Domain Modeling, Context Diagrams, System Boundaries, Functional Decomposition, NFR Analysis",
+        skills: "AI-assisted requirement analysis, domain modeling, architecture drafting",
+        deliverable: "Solution Blueprint — domain model, context diagram, system boundaries, functional capabilities, NFR matrix, assumptions, and risks",
+        outcome: "Can transform business requirements into architectural building blocks, identify system boundaries, define capabilities, and recognise critical NFRs that influence architecture.",
+      },
+      {
+        title: "Architecture Patterns & Technology Selection",
+        topics: "Monolith vs Microservices, Event-Driven Architecture, Integration Patterns, Cloud-Native Patterns, Technology Evaluation Frameworks",
+        skills: "AI-assisted architecture reviews, technology comparison, pattern recommendations",
+        deliverable: "Architecture Decision Record (ADR) Package — architecture options, technology evaluation matrix, tradeoff analysis, and recommended architecture",
+        outcome: "Can evaluate architecture patterns, select appropriate technologies, justify architectural decisions, and understand tradeoffs.",
+      },
+      {
+        title: "APIs, Integrations & Data Architecture",
+        topics: "API-First Design, OpenAPI, Data Modeling, Database Selection, Integration Strategies, Event Design",
+        skills: "AI-assisted API design, schema generation, integration analysis",
+        deliverable: "Technical Design Document — API contracts, ER diagrams, event catalog, integration specifications, and data architecture",
+        outcome: "Can design APIs, create data models, define integrations, and establish system contracts between services and external systems.",
+      },
+      {
+        title: "Delivery Planning & Risk Management",
+        topics: "Estimation Techniques, Delivery Planning, Dependency Management, Risk Analysis, MVP Identification, Roadmap Creation",
+        skills: "AI-assisted estimation, risk identification, roadmap generation",
+        deliverable: "Delivery Strategy Document — MVP definition, release roadmap, sprint plan, dependency map, effort estimates, and risk register",
+        outcome: "Can estimate effort, identify dependencies, prioritise features, define MVP scope, and create realistic delivery plans.",
+      },
+      {
+        title: "Customer Architecture Review Board",
+        topics: "Architecture Defense, Stakeholder Objections, Cost Discussions, Scalability Discussions, Security Reviews, Executive Alignment",
+        skills: "AI-assisted review preparation, objection handling, presentation refinement",
+        deliverable: "Customer Solution Proposal — final architecture, implementation roadmap, cost estimate, risk mitigation plan, and architecture review presentation",
+        outcome: "Can defend architecture decisions, answer technical and business concerns, adjust recommendations based on feedback, and gain stakeholder buy-in.",
+      },
+    ],
   },
   {
-    title: "Technical Leadership & Delivery Management",
-    duration: "Week 4",
-    sessions: 5,
-    desc: "Lead engineering teams through ambiguity, manage delivery risk at scale, and resolve conflict while keeping stakeholders aligned.",
-    topics: [
-      "Agile at scale: SAFe, LeSS, and adapting frameworks to client contexts",
-      "Stakeholder management: building trust, managing expectations, and navigating politics",
-      "Change management: ADKAR framework and driving technology adoption",
-      "Conflict resolution: handling technical disagreements and scope disputes",
-      "Engineering team coaching: mentoring juniors and running effective retrospectives",
-      "Delivery risk management: early signals, mitigation strategies, and escalation paths",
+    weekNum: 3,
+    title: "Engineering Excellence & AI-Assisted Delivery",
+    badge: "Technical",
+    days: [
+      {
+        title: "Translating Vision into Execution",
+        topics: "Architecture decomposition, capability mapping, backlog creation, repository strategy, development planning, Git workflows",
+        skills: "Technical decomposition, sprint planning, AI-assisted task breakdown, engineering planning",
+        deliverable: "Engineering Blueprint, Capability Map, Service Breakdown Structure, Sprint Plan",
+        outcome: "Can convert architecture into executable engineering workstreams.",
+      },
+      {
+        title: "Building the Core Business Capability",
+        topics: "API design, backend development, authentication, authorization, service implementation, API standards",
+        skills: "Backend engineering, secure API development, AI-assisted coding, service design",
+        deliverable: "Working Business Service, API Documentation, Authentication Layer",
+        outcome: "Can implement business capabilities that directly address customer requirements.",
+      },
+      {
+        title: "Designing Systems That Scale",
+        topics: "Database design, ORM, SQL optimization, integration patterns, event design, messaging fundamentals",
+        skills: "Data layer engineering, scalability design, AI-assisted schema generation",
+        deliverable: "Database Schema, Data Layer, Integration Design, Event Catalog",
+        outcome: "Can design scalable systems that support future growth and integrations.",
+      },
+      {
+        title: "Engineering with AI as a Force Multiplier",
+        topics: "AI-assisted development, code reviews, debugging, testing strategies, documentation generation",
+        skills: "AI pair programming, code quality improvement, automated testing, engineering productivity",
+        deliverable: "Tested Codebase, Code Review Report, Unit Test Suite, Technical Documentation",
+        outcome: "Can leverage AI responsibly to accelerate development while maintaining quality.",
+      },
+      {
+        title: "Delivering Under Change and Pressure",
+        topics: "Requirement changes, impact analysis, prioritisation, technical debt management, stakeholder communication",
+        skills: "Adaptability, decision making, customer communication, delivery management",
+        deliverable: "Updated Solution, Change Impact Assessment, Sprint Demo, Customer Review Presentation",
+        outcome: "Can successfully navigate changing requirements without losing stakeholder confidence.",
+      },
     ],
-    outcome: "Simulate leading a team through a high-stakes delivery crisis — resolve scope conflict, re-plan the sprint, and present to stakeholders.",
-    badge: "Leadership",
   },
   {
-    title: "Operational Excellence & Reliability",
-    duration: "Week 5",
-    sessions: 5,
-    desc: "Operate production AI systems at enterprise scale with the reliability, cost-efficiency, and security posture that clients demand.",
-    topics: [
-      "DevOps for AI: CI/CD pipelines, model registries, and MLOps maturity",
-      "Site Reliability Engineering (SRE): SLOs, SLAs, and error budget management",
-      "Chaos engineering: designing resilient systems through controlled failure injection",
-      "Cost optimization: right-sizing LLM inference, spot instances, and FinOps practices",
-      "Security operations: vulnerability management, incident response, and threat modeling",
-      "Model monitoring: drift detection, data quality alerts, and retraining triggers",
+    weekNum: 4,
+    title: "Building Intelligent Solutions",
+    badge: "AI Core",
+    days: [
+      {
+        title: "Identifying Where AI Creates Value",
+        topics: "AI use-case discovery, AI transformation frameworks, opportunity assessment, ROI analysis, business value mapping, AI readiness assessment",
+        skills: "AI consulting, business value analysis, opportunity identification, stakeholder alignment",
+        deliverable: "AI Opportunity Assessment, AI Readiness Report, Prioritised Use Case Portfolio",
+        outcome: "Can identify high-impact AI opportunities and connect AI initiatives to business outcomes.",
+      },
+      {
+        title: "Turning Enterprise Knowledge into Intelligence",
+        topics: "RAG fundamentals, document processing, chunking strategies, embeddings, vector databases, retrieval techniques",
+        skills: "Knowledge engineering, information retrieval, AI solution design",
+        deliverable: "Knowledge Architecture Blueprint, Ingestion Strategy, Retrieval Design Document",
+        outcome: "Can design enterprise knowledge systems that transform organisational data into AI-accessible intelligence.",
+      },
+      {
+        title: "Designing Agents That Can Reason and Act",
+        topics: "Agentic workflows, LangChain, LangGraph, tool calling, MCP concepts, multi-agent systems, orchestration patterns",
+        skills: "Agent design, workflow orchestration, tool integration, reasoning systems",
+        deliverable: "Multi-Agent Architecture, Agent Responsibilities Matrix, Workflow Design",
+        outcome: "Can design AI agents that collaborate, retrieve information, and perform actions autonomously.",
+      },
+      {
+        title: "Building Trustworthy AI Systems",
+        topics: "Prompt engineering, guardrails, hallucination mitigation, evaluation frameworks, responsible AI, governance, security",
+        skills: "AI evaluation, prompt optimisation, risk management, governance implementation",
+        deliverable: "AI Evaluation Framework, Guardrail Strategy, AI Risk Assessment Report",
+        outcome: "Can assess and improve AI quality, reliability, and trustworthiness for enterprise environments.",
+      },
+      {
+        title: "Advising Customers on AI Transformation",
+        topics: "AI strategy consulting, executive communication, adoption roadmaps, organisational change management, AI operating models",
+        skills: "AI consulting, executive storytelling, transformation planning, stakeholder influence",
+        deliverable: "AI Transformation Proposal, Executive AI Roadmap, Customer AI Adoption Presentation",
+        outcome: "Can advise executives on AI adoption strategies and justify AI investments with measurable business outcomes.",
+      },
     ],
-    outcome: "Instrument a live AI service with full observability, run a chaos experiment, and author its production runbook.",
+  },
+  {
+    weekNum: 5,
+    title: "Operating at Production Scale",
     badge: "Operations",
+    days: [
+      {
+        title: "Preparing for Production Reality",
+        topics: "Production readiness reviews, cloud architecture, AWS fundamentals, security, IAM, networking, deployment strategies",
+        skills: "Production planning, cloud architecture validation, security assessment, operational thinking",
+        deliverable: "Production Readiness Assessment, Deployment Architecture, Security Review Report",
+        outcome: "Can evaluate whether a solution is truly ready for production deployment.",
+      },
+      {
+        title: "Automating Reliable Delivery",
+        topics: "CI/CD, GitHub Actions, Jenkins, GitLab CI, infrastructure automation, release management",
+        skills: "Pipeline design, release automation, deployment strategy, DevOps practices",
+        deliverable: "End-to-End CI/CD Pipeline, Release Strategy, Deployment Runbook",
+        outcome: "Can automate software delivery and reduce deployment risks.",
+      },
+      {
+        title: "Building Resilient Platforms",
+        topics: "Docker, Kubernetes, scaling patterns, service resilience, disaster recovery, high availability",
+        skills: "Containerisation, orchestration, scalability planning, resiliency engineering",
+        deliverable: "Containerised Platform, Kubernetes Deployment, HA Strategy Document",
+        outcome: "Can design platforms that remain reliable under growth and failure scenarios.",
+      },
+      {
+        title: "Detecting Problems Before Customers Do",
+        topics: "Monitoring, observability, logging, tracing, Grafana, CloudWatch, alerting, AI-assisted operations",
+        skills: "Observability design, dashboard creation, anomaly detection, operational intelligence",
+        deliverable: "Monitoring Dashboard, Alerting Strategy, Operational Health Report",
+        outcome: "Can establish observability systems that provide actionable operational insights.",
+      },
+      {
+        title: "Leading Through Incidents and Recovery",
+        topics: "Incident management, RCA, war-room operations, stakeholder communication, SRE practices, postmortems",
+        skills: "Troubleshooting, RCA creation, executive communication, crisis management",
+        deliverable: "Incident Response Report, RCA Document, Executive Incident Briefing",
+        outcome: "Can lead technical and business stakeholders through production incidents effectively.",
+      },
+    ],
   },
   {
-    title: "Strategic Advisory & Business Transformation",
-    duration: "Week 6",
-    sessions: 5,
-    desc: "Step into the trusted advisor role — shape digital strategy, realize measurable business value, and lead enterprise AI transformation initiatives.",
-    topics: [
-      "Digital strategy frameworks: value chain analysis and competitive positioning",
-      "Value realization: building ROI dashboards and measuring AI business impact",
-      "Innovation leadership: running ideation workshops and building AI Centers of Excellence",
-      "The trusted advisor mindset: from vendor to strategic partner",
-      "Executive storytelling: structuring board-level narratives with data",
-      "Building reusable accelerators and best practices for the organization",
-    ],
-    outcome: "Present a 12-month digital transformation roadmap — including value milestones, risk mitigation, and executive alignment plan — to a simulated C-suite panel.",
+    weekNum: 6,
+    title: "Leading Customer Transformation",
     badge: "Business",
+    days: [
+      {
+        title: "Speaking the Language of Executives",
+        topics: "Executive priorities, business metrics, value realization, financial drivers, board-level communication, storytelling",
+        skills: "Executive communication, business acumen, value articulation, strategic thinking",
+        deliverable: "Executive Briefing Pack, Business Value Assessment, Leadership Presentation",
+        outcome: "Can communicate technical solutions in terms executives care about and secure stakeholder buy-in.",
+      },
+      {
+        title: "Navigating Complex Stakeholder Landscapes",
+        topics: "Stakeholder management, conflict resolution, influence without authority, negotiation, expectation management",
+        skills: "Stakeholder engagement, negotiation, relationship building, conflict management",
+        deliverable: "Stakeholder Engagement Plan, Negotiation Strategy, Risk Escalation Matrix",
+        outcome: "Can effectively manage competing priorities and align diverse stakeholders.",
+      },
+      {
+        title: "Driving AI Adoption and Organisational Change",
+        topics: "Change management, AI adoption frameworks, operating model design, governance, workforce enablement",
+        skills: "Change leadership, transformation planning, organisational consulting",
+        deliverable: "AI Adoption Roadmap, Operating Model Proposal, Change Management Plan",
+        outcome: "Can lead AI and technology adoption initiatives across organisations.",
+      },
+      {
+        title: "Managing Escalations and Strategic Risks",
+        topics: "Escalation management, crisis leadership, executive expectations, strategic risk assessment, customer recovery plans",
+        skills: "Executive presence, crisis management, decision making under pressure",
+        deliverable: "Executive Escalation Response Plan, Strategic Risk Register, Customer Recovery Strategy",
+        outcome: "Can lead customers through difficult situations while preserving trust and confidence.",
+      },
+      {
+        title: "Becoming a Trusted Strategic Advisor",
+        topics: "Consulting frameworks, long-term roadmap planning, innovation workshops, customer success strategy, account growth opportunities",
+        skills: "Strategic consulting, roadmap development, innovation leadership",
+        deliverable: "Customer Transformation Strategy, 12-Month Roadmap, Executive Advisory Presentation",
+        outcome: "Can evolve from solution provider to long-term trusted advisor.",
+      },
+    ],
   },
   {
+    weekNum: 7,
     title: "FDE Residency: Customer Engagement Under Fire",
-    duration: "Week 7",
-    sessions: "Continuous",
-    desc: "Simulate the most demanding real-world FDE scenarios — crisis management, production incidents, architecture defense, and live scope negotiation.",
-    topics: [
-      "Crisis management simulation: handle a production outage with business impact",
-      "Scope negotiation: re-baseline a project under executive pressure without losing trust",
-      "Production incident response: triage, communicate, and remediate in real time",
-      "Architecture defense: defend your design choices to a hostile review panel",
-      "Client escalation drill: de-escalate a dissatisfied stakeholder scenario",
-      "Embedded team feedback and peer-led architecture walkthroughs",
-    ],
-    outcome: "Successfully navigate a full-day multi-scenario simulation assessed by program faculty and industry mentors.",
     badge: "Live Project",
+    days: [
+      {
+        title: "Entering the Customer Battlefield",
+        topics: "Customer kickoff, stakeholder interviews, business objectives, hidden requirements, engagement planning",
+        skills: "Discovery leadership, stakeholder management, ambiguity handling",
+        deliverable: "Engagement Charter, Stakeholder Analysis, Discovery Summary, Risk Log",
+        outcome: "Can rapidly understand a customer situation and establish engagement direction.",
+      },
+      {
+        title: "Surviving Requirement Volatility",
+        topics: "Requirement changes, scope negotiation, prioritisation, expectation management, tradeoff discussions",
+        skills: "Adaptability, consulting communication, decision making",
+        deliverable: "Updated Requirements, Scope Analysis, Tradeoff Assessment, Executive Update",
+        outcome: "Can manage shifting priorities without losing stakeholder confidence.",
+      },
+      {
+        title: "Solving Problems Across Organisational Boundaries",
+        topics: "Cross-functional coordination, architecture conflicts, integration issues, vendor dependencies",
+        skills: "Systems thinking, collaboration, escalation management",
+        deliverable: "Resolution Plan, Integration Strategy, Dependency Management Report",
+        outcome: "Can drive progress across multiple teams and conflicting interests.",
+      },
+      {
+        title: "Responding When Everything Goes Wrong",
+        topics: "Production incidents, AI failures, outages, executive escalations, operational recovery",
+        skills: "Incident leadership, crisis communication, RCA facilitation",
+        deliverable: "Incident Report, Recovery Plan, Executive Communication Package",
+        outcome: "Can lead during high-pressure operational failures.",
+      },
+      {
+        title: "Defending Your Recommendations",
+        topics: "Executive reviews, architecture defense, AI strategy defense, customer objections",
+        skills: "Executive influence, persuasion, advisory communication",
+        deliverable: "Executive Steering Committee Presentation, Recommendation Defense",
+        outcome: "Can confidently defend decisions before senior stakeholders.",
+      },
+    ],
   },
   {
+    weekNum: 8,
     title: "FDE Certification Residency & Executive Board Review",
-    duration: "Week 8",
-    sessions: 4,
-    desc: "Synthesize everything into a transformation vision, defend it to an executive board, and earn your Senior FDE certification.",
-    topics: [
-      "Transformation vision: articulating a 3-year AI-first strategy for a real client context",
-      "MVP planning: scoping the first 90 days of delivery with clear success criteria",
-      "Board-level presentation: structure, storytelling, and handling adversarial questions",
-      "Written Architecture Decision Record and executive case study for your portfolio",
-      "360° peer feedback, self-assessment, and final mentor debrief",
-      "Certification defense and Senior FDE graduation ceremony",
-    ],
-    outcome: "Earn your Senior FDE certification upon successful board defense and panel approval.",
     badge: "Capstone",
+    days: [
+      {
+        title: "Winning the Customer's Trust",
+        topics: "Customer discovery, stakeholder interviews, business objectives, AI opportunities, hidden requirements",
+        skills: "Executive discovery, consulting, business analysis, relationship building",
+        deliverable: "Discovery Report, Stakeholder Map, Business Opportunity Assessment",
+        outcome: "Can establish credibility and identify strategic business opportunities.",
+      },
+      {
+        title: "Creating the Transformation Vision",
+        topics: "Solution design, architecture options, AI strategy, operating model recommendations, roadmap planning",
+        skills: "Solution architecture, strategic thinking, AI consulting",
+        deliverable: "Transformation Strategy Document, Architecture Proposal, AI Adoption Strategy",
+        outcome: "Can translate business needs into a compelling transformation vision.",
+      },
+      {
+        title: "Delivering Executive-Level Solutions",
+        topics: "MVP planning, implementation strategy, operating model, cost estimation, risk management",
+        skills: "Programme planning, prioritisation, delivery strategy, tradeoff management",
+        deliverable: "Delivery Roadmap, Risk Register, Cost & Value Assessment",
+        outcome: "Can build realistic transformation plans balancing value, risk, and speed.",
+      },
+      {
+        title: "Defending the Strategy Under Pressure",
+        topics: "Executive objections, architecture reviews, AI governance concerns, security reviews, budget reductions",
+        skills: "Executive influence, negotiation, crisis response, advisory communication",
+        deliverable: "Revised Proposal, Executive Response Pack, Governance Plan",
+        outcome: "Can adapt recommendations while maintaining strategic direction.",
+      },
+      {
+        title: "Facing the Certification Board",
+        topics: "Final executive presentation, customer Q&A, board review, recommendation defense",
+        skills: "Executive storytelling, leadership presence, strategic advisory skills",
+        deliverable: "Final Transformation Proposal, Executive Presentation, Certification Defense",
+        outcome: "Demonstrates readiness to function as an elite Forward Deployed Engineer.",
+      },
+    ],
   },
 ];
 
@@ -329,13 +552,142 @@ const badgeColors: Record<string, string> = {
 
 type Tab = 'senior' | 'junior' | 'architect';
 
-const tabs: { id: Tab; label: string; subtitle: string; modules: typeof seniorModules }[] = [
-  { id: 'junior', label: 'Junior FDE', subtitle: '6-Module Intensive · 6 months', modules: juniorModules },
-  { id: 'senior', label: 'Senior FDE', subtitle: '8-Week Intensive · 2 months', modules: seniorModules },
-  { id: 'architect', label: 'Solutions Architect', subtitle: '5-Module Elite Track · 12 months', modules: architectModules },
+type BasicModule = { title: string; duration: string; sessions: number | string; desc: string; topics: string[]; outcome: string; badge: string };
+
+const tabs: { id: Tab; label: string; subtitle: string; modules?: BasicModule[] }[] = [
+  { id: 'junior',    label: 'Junior FDE',         subtitle: '6-Module Intensive · 6 months',      modules: juniorModules },
+  { id: 'senior',    label: 'Senior FDE',          subtitle: '8-Week Intensive · 2 months' },
+  { id: 'architect', label: 'Solutions Architect', subtitle: '5-Module Elite Track · 12 months',  modules: architectModules },
 ];
 
-function ModuleList({ modules }: { modules: typeof seniorModules }) {
+function SeniorModuleList() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false, margin: '-100px' });
+  const [openWeek, setOpenWeek] = useState<number>(0);
+  const [openDay, setOpenDay]   = useState<number>(0);
+
+  return (
+    <div ref={ref} className="space-y-3">
+      {seniorWeeks.map((week, wi) => (
+        <motion.div
+          key={wi}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.4, delay: wi * 0.07 }}
+          className={cn('glass-card rounded-2xl overflow-hidden transition-all duration-300', openWeek === wi && 'border-primary/40 shadow-[0_0_30px_rgba(229,106,26,0.1)]')}
+        >
+          {/* Week header */}
+          <button
+            onClick={() => { setOpenWeek(openWeek === wi ? -1 : wi); setOpenDay(0); }}
+            className="w-full flex items-center justify-between p-6 text-left focus:outline-none group"
+          >
+            <div className="flex items-center gap-4 flex-1 min-w-0">
+              <div className={cn('w-10 h-10 rounded-full flex items-center justify-center font-bold text-base transition-all duration-300 flex-shrink-0',
+                openWeek === wi ? 'bg-primary text-white shadow-[0_0_15px_rgba(229,106,26,0.5)]' : 'bg-white/5 text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary')}>
+                W{week.weekNum}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-3 flex-wrap mb-1">
+                  <h4 className={cn('text-lg font-display font-bold transition-colors', openWeek === wi ? 'text-primary' : 'text-white group-hover:text-primary')}>
+                    {week.title}
+                  </h4>
+                  <span className={cn('text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border', badgeColors[week.badge] || badgeColors.Technical)}>
+                    {week.badge}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                  <BookOpen className="w-3 h-3" />{week.days.length} days
+                </div>
+              </div>
+            </div>
+            <ChevronDown className={cn('w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ml-4', openWeek === wi ? 'rotate-180 text-primary' : '')} />
+          </button>
+
+          {/* Days */}
+          <AnimatePresence initial={false}>
+            {openWeek === wi && (
+              <motion.div
+                key="days"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+                className="overflow-hidden"
+              >
+                <div className="px-6 pb-6 pt-0 ml-14 space-y-2">
+                  {week.days.map((day, di) => (
+                    <div key={di} className={cn('rounded-xl border transition-all duration-200', openDay === di ? 'border-primary/30 bg-primary/5' : 'border-white/5 bg-white/2 hover:border-white/15')}>
+                      <button
+                        onClick={() => setOpenDay(openDay === di ? -1 : di)}
+                        className="w-full flex items-center justify-between px-4 py-3 text-left focus:outline-none"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={cn('w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0', openDay === di ? 'bg-primary text-white' : 'bg-white/10 text-muted-foreground')}>
+                            {di + 1}
+                          </div>
+                          <span className={cn('text-sm font-semibold', openDay === di ? 'text-primary' : 'text-white/90')}>{day.title}</span>
+                        </div>
+                        <ChevronDown className={cn('w-4 h-4 text-muted-foreground transition-transform duration-200 flex-shrink-0', openDay === di ? 'rotate-180 text-primary' : '')} />
+                      </button>
+
+                      <AnimatePresence initial={false}>
+                        {openDay === di && (
+                          <motion.div
+                            key="day-content"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                            className="overflow-hidden"
+                          >
+                            <div className="px-4 pb-4 space-y-3">
+                              {/* Topics */}
+                              <div>
+                                <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1.5">Topics</p>
+                                <div className="flex flex-wrap gap-1.5">
+                                  {day.topics.split(',').map((t, ti) => (
+                                    <span key={ti} className="text-xs bg-white/5 border border-white/10 text-white/70 px-2 py-0.5 rounded-full">{t.trim()}</span>
+                                  ))}
+                                </div>
+                              </div>
+                              {/* Skills */}
+                              <div>
+                                <p className="text-[10px] font-bold uppercase tracking-widest text-cyan-400 mb-1.5">Skills Practised</p>
+                                <p className="text-xs text-white/70 leading-relaxed">{day.skills}</p>
+                              </div>
+                              {/* Deliverable */}
+                              <div className="flex items-start gap-2 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                                <Layers className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                                <div>
+                                  <p className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-0.5">Deliverable</p>
+                                  <p className="text-xs text-white/80">{day.deliverable}</p>
+                                </div>
+                              </div>
+                              {/* Outcome */}
+                              <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/10 border border-primary/20">
+                                <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                                <div>
+                                  <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-0.5">Outcome</p>
+                                  <p className="text-xs text-white/90">{day.outcome}</p>
+                                </div>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
+function ModuleList({ modules }: { modules: BasicModule[] }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, margin: "-100px" });
   const [openIndex, setOpenIndex] = useState<number>(0);
@@ -486,7 +838,10 @@ export function Curriculum() {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.3 }}
           >
-            <ModuleList modules={currentTab.modules} />
+            {activeTab === 'senior'
+              ? <SeniorModuleList />
+              : <ModuleList modules={currentTab.modules!} />
+            }
           </motion.div>
         </AnimatePresence>
       </div>

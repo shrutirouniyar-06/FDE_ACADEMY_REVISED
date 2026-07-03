@@ -6,5 +6,37 @@ channel = "stable-25_05"
 expertMode = true
 
 [[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
 localPort = 23623
 externalPort = 80
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "FDE Campus"
+
+[[workflows.workflow]]
+name = "FDE Campus"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd Frontend && PORT=5000 BASE_PATH=/ pnpm --filter @workspace/fde-campus run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
