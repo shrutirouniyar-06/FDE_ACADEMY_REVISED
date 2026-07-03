@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { PROGRAMS } from '@/data/mock';
 import { Link } from 'wouter';
+import { TiltCard } from '@/components/ui/tilt-card';
 
 export function ProgramsSection() {
   const ref = useRef(null);
@@ -28,6 +29,8 @@ export function ProgramsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.5, delay: idx * 0.2 }}
+            >
+            <TiltCard
               className={`relative glass-card rounded-3xl p-8 flex flex-col h-full group cursor-default
                 transition-all duration-300
                 hover:-translate-y-3
@@ -78,6 +81,7 @@ export function ProgramsSection() {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
+            </TiltCard>
             </motion.div>
           ))}
         </div>

@@ -270,6 +270,89 @@
 /* Navbar in light mode */
 .light .bg-background\/80 { background-color: rgba(245,245,247,0.88) !important; }
 
+/* ── Animation keyframes ── */
+
+/* Ambient orb drifts */
+@keyframes orb-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(70px, -50px) scale(1.08); }
+  50%  { transform: translate(30px,  50px) scale(0.94); }
+  75%  { transform: translate(-50px, 25px) scale(1.05); }
+}
+@keyframes orb-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(-60px,  65px) scale(1.12); }
+  50%  { transform: translate(-90px, -35px) scale(0.90); }
+  75%  { transform: translate( 45px, -55px) scale(1.07); }
+}
+@keyframes orb-drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate( 50px,  55px) scale(0.93); }
+  50%  { transform: translate(-65px,  25px) scale(1.14); }
+  75%  { transform: translate( 25px, -65px) scale(0.97); }
+}
+
+/* Gentle float for elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* Shimmer pass over gradient text */
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* Pulsing glow ring */
+@keyframes glow-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(229,106,26,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(229,106,26,0.12); }
+}
+
+/* Subtle grid fade */
+@keyframes grid-fade {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.7; }
+}
+
+.animate-orb-1 { animation: orb-drift-1 22s ease-in-out infinite; }
+.animate-orb-2 { animation: orb-drift-2 28s ease-in-out infinite; }
+.animate-orb-3 { animation: orb-drift-3 19s ease-in-out infinite; }
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-glow-ring { animation: glow-ring 3s ease-in-out infinite; }
+.animate-grid { animation: grid-fade 6s ease-in-out infinite; }
+
+/* Shimmer text utility */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary)) 0%,
+    #FF8A3D 30%,
+    #ffe0c8 50%,
+    #FF8A3D 70%,
+    hsl(var(--primary)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb-1,
+  .animate-orb-2,
+  .animate-orb-3,
+  .animate-float,
+  .animate-glow-ring,
+  .animate-grid,
+  .text-shimmer {
+    animation: none !important;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

@@ -4,6 +4,8 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 import { ThemeProvider } from '@/contexts/ThemeContext';
+import { CursorGlow } from '@/components/ui/cursor-glow';
+import { ScrollProgress } from '@/components/ui/scroll-progress';
 
 import { 
   HomePage, 
@@ -49,6 +51,8 @@ function App() {
     <ThemeProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
+          <ScrollProgress />
+          <CursorGlow />
           <WouterRouter base={import.meta.env.BASE_URL?.replace(/\/$/, '') || ''}>
             <Router />
           </WouterRouter>
