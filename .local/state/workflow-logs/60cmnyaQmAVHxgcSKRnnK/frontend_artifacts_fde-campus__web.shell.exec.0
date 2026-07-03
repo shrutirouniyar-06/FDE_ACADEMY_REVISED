@@ -1,0 +1,87 @@
+
+> @workspace/fde-campus@0.0.0 dev /home/runner/workspace/Frontend/artifacts/fde-campus
+> vite --config vite.config.ts --host 0.0.0.0
+
+[replit-cartographer] Loaded @theme tokens from /home/runner/workspace/Frontend/artifacts/fde-campus/src/index.css
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m254[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m23623[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.24.0.2:[1m23623[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:49:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/SuccessStories.tsx, /src/components/sections/Programs.tsx, /src/components/sections/EnterpriseProjects.tsx, /src/components/sections/BlogPreview.tsx, /src/components/sections/FAQ.tsx, /src/components/sections/EventsPreview.tsx, /src/components/sections/Mentors.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:54:34 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/HomePage.tsx[22m
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1783061675040,"name":"Error","message":"ProgramComparison is not defined","stack":"    at HomePage /home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/HomePage.tsx:38:10\n\n\n\n\n\n\n\n\n","loc":{"line":38,"column":10,"file":"/home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/HomePage.tsx"},"frame":"36 |          <CareerProgression />\n37 |          <ProgramsSection />\n38 |          <ProgramComparison />\n   |           ^\n39 |          <Curriculum />\n40 |          <SignatureActivities />"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:54:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/HomePage.tsx[22m
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1783061675427,"name":"Error","message":"ProgramComparison is not defined","stack":"    at HomePage /home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/HomePage.tsx:38:10\n\n\n\n\n\n\n\n\n","loc":{"line":38,"column":10,"file":"/home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/HomePage.tsx"},"frame":"36 |          <CareerProgression />\n37 |          <ProgramsSection />\n38 |          <Curriculum />\n   |           ^\n39 |          <SignatureActivities />\n40 |          <BusinessImpact />"}
+[41m[30m ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL [39m[49m [31m@workspace/fde-campus@0.0.0 dev: `vite --config vite.config.ts --host 0.0.0.0`[39m
+[31mExit status 143[39m

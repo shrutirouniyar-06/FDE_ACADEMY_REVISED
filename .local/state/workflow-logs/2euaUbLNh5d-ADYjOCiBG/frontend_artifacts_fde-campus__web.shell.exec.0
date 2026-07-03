@@ -1,0 +1,111 @@
+
+> @workspace/fde-campus@0.0.0 dev /home/runner/workspace/Frontend/artifacts/fde-campus
+> vite --config vite.config.ts --host 0.0.0.0
+
+[replit-cartographer] Loaded @theme tokens from /home/runner/workspace/Frontend/artifacts/fde-campus/src/index.css
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m1495[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m23623[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.24.0.2:[1m23623[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Mentors.tsx[22m
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1783068130492,"name":"Error","message":"ExternalLink is not defined","stack":"    at /home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx:105:26\n    at Array.map (<anonymous>)\n    at Mentors /home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx:80:22\n\n\n\n\n\n\n","loc":{"line":105,"column":26,"file":"/home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx"},"frame":"103|                          aria-label={`${mentor.name}'s Glo profile`}\n104|                        >\n105|                          <ExternalLink className=\"w-5 h-5\" />\n   |                           ^\n106|                        </a>\n107|                      </div>"}
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1783068131383,"name":"Error","message":"ExternalLink is not defined","stack":"    at /home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx:105:26\n    at Array.map (<anonymous>)\n    at Mentors /home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx:80:22\n\n\n\n\n\n\n","loc":{"line":105,"column":26,"file":"/home/runner/workspace/Frontend/artifacts/fde-campus/src/components/sections/Mentors.tsx"},"frame":"103|                          aria-label={`${mentor.name}'s Glo profile`}\n104|                        >\n105|                          <ExternalLink className=\"w-5 h-5\" />\n   |                           ^\n106|                        </a>\n107|                      </div>"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:12 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Mentors.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/HomePage.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m8:42:30 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/HomePage.tsx[22m [33m(x2)[39m
+[41m[30m ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL [39m[49m [31m@workspace/fde-campus@0.0.0 dev: `vite --config vite.config.ts --host 0.0.0.0`[39m
+[31mExit status 143[39m

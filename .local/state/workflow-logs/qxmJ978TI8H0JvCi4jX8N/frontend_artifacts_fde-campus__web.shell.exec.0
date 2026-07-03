@@ -1,0 +1,91 @@
+
+> @workspace/fde-campus@0.0.0 dev /home/runner/workspace/Frontend/artifacts/fde-campus
+> vite --config vite.config.ts --host 0.0.0.0
+
+[replit-cartographer] Loaded @theme tokens from /home/runner/workspace/Frontend/artifacts/fde-campus/src/index.css
+[2m6:30:14 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
+
+  [32m[1mVITE[22m v7.3.6[39m  [2mready in [0m[1m1070[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m23623[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.24.0.2:[1m23623[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m6:30:18 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@/components/sections/CareerRoadmaps" from "src/pages/CareerRoadmapsPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/CareerRoadmapsPage.tsx[39m:3:31
+[33m  3  |  import { Navbar } from "@/components/layout/Navbar";
+  4  |  import { Footer } from "@/components/layout/Footer";
+  5  |  import { CareerRoadmaps } from "@/components/sections/CareerRoadmaps";
+     |                                  ^
+  6  |  import { CareerProgression } from "@/components/sections/CareerProgression";
+  7  |  import { SalaryGrowth } from "@/components/sections/SalaryGrowth";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:30:19 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@/components/sections/CareerRoadmaps" from "src/pages/CareerRoadmapsPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/Frontend/artifacts/fde-campus/src/pages/CareerRoadmapsPage.tsx[39m:3:31
+[33m  3  |  import { Navbar } from "@/components/layout/Navbar";
+  4  |  import { Footer } from "@/components/layout/Footer";
+  5  |  import { CareerRoadmaps } from "@/components/sections/CareerRoadmaps";
+     |                                  ^
+  6  |  import { CareerProgression } from "@/components/sections/CareerProgression";
+  7  |  import { SalaryGrowth } from "@/components/sections/SalaryGrowth";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:29079:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:29076:14)
+      at normalizeUrl (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:27199:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:27257:32
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:27225:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:28877:14)
+      at async loadAndTransform (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:22746:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/Frontend/node_modules/.pnpm/vite@7.3.6_@types+node@25.9.4_jiti@2.7.0_lightningcss@1.32.0_tsx@4.22.4_yaml@2.9.0/node_modules/vite/dist/node/chunks/config.js:24622:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:31:05 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m6:31:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mrecharts[32m[39m
+[2m6:31:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[41m[30m ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL [39m[49m [31m@workspace/fde-campus@0.0.0 dev: `vite --config vite.config.ts --host 0.0.0.0`[39m
+[31mExit status 143[39m
