@@ -20,7 +20,7 @@ const workflow = [
     icon: Target,
     color: '#3b82f6',
     details: [
-      'Understand the client's strategic objectives and KPIs',
+      "Understand the client's strategic objectives and KPIs",
       'Map executive pain points to potential AI opportunities',
       'Assess feasibility, scope, and expected business impact',
       'Align stakeholders on success criteria before work begins',
