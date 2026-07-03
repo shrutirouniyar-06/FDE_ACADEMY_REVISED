@@ -23,20 +23,16 @@ import { EventsPreview } from '@/components/sections/EventsPreview';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { MarqueeStrip } from '@/components/ui/marquee-strip';
-
 export function HomePage() {
   return (
     <>
       <Navbar />
       <main>
         <Hero />
-        <MarqueeStrip />
         <Stats />
         <WhyFDE />
         <Framework />
         <WhatIsFDE />
-        <MarqueeStrip variant="accent" />
         <IndustryChallenge />
         <CareerProgression />
         <ProgramsSection />
@@ -44,7 +40,6 @@ export function HomePage() {
         <Curriculum />
         <CapabilityPillars />
         <LearningActivities />
-        <MarqueeStrip />
         <Mentors />
         <LearningTimeline />
         <EnterpriseProjects />

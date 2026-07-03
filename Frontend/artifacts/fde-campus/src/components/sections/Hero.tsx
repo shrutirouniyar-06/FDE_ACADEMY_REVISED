@@ -70,11 +70,11 @@ export function Hero() {
           }}
         />
 
-        {/* Morphing blob 2 – indigo/blue, bottom-left */}
+        {/* Morphing blob 2 – deep amber, bottom-left */}
         <div
           className="animate-blob-b animate-orb-2 absolute -bottom-[25%] -left-[15%] w-[900px] h-[900px]"
           style={{
-            background: 'radial-gradient(circle at 60% 60%, rgba(79,70,229,0.22) 0%, rgba(59,130,246,0.10) 50%, transparent 75%)',
+            background: 'radial-gradient(circle at 60% 60%, rgba(180,60,0,0.20) 0%, rgba(229,106,26,0.07) 50%, transparent 75%)',
             filter: 'blur(80px)',
           }}
         />
