@@ -85,20 +85,9 @@ export function Mentors() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className="glass-card rounded-2xl overflow-hidden group hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_16px_40px_rgba(229,106,26,0.12)] transition-all duration-400"
                 >
-                  <div className="aspect-[4/3] relative overflow-hidden">
-                    <img 
-                      src={mentor.image} 
-                      alt={mentor.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#202229] via-transparent to-transparent" />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                  </div>
-                  
                   <div className="p-6 relative">
                     {/* Action buttons */}
-                    <div className="absolute -top-6 right-6 flex gap-2">
+                    <div className="flex justify-end gap-2 mb-4">
                       <a
                         href={`mailto:${mentor.email}`}
                         className="w-11 h-11 rounded-full bg-[#202229] border border-border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary hover:scale-110 shadow-lg transition-all duration-300"
@@ -114,6 +103,7 @@ export function Mentors() {
                     <h4 className="text-2xl font-display font-bold text-white mb-1 group-hover:text-primary transition-colors duration-300">{mentor.name}</h4>
                     <p className="text-primary font-medium mb-1">{mentor.role} &bull; {mentor.experience}</p>
                     <p className="text-xs text-muted-foreground mb-4 truncate">{mentor.email}</p>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{mentor.description}</p>
                     
                     <div className="flex flex-wrap gap-2">
                       {mentor.expertise.map((tag, tidx) => (
