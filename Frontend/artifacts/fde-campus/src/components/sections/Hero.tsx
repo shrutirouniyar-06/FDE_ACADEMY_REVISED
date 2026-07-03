@@ -46,7 +46,7 @@ export function Hero() {
     >
 
       {/* ─── Background ─── */}
-      <div className="absolute inset-0 bg-[#080809] overflow-hidden">
+      <div className="absolute inset-0 bg-[#0F0F10] overflow-hidden">
 
         {/* Noise grain overlay */}
         <div className="grain-overlay absolute inset-0 pointer-events-none z-[1]" />
@@ -56,36 +56,17 @@ export function Hero() {
           className="absolute inset-0 animate-grid opacity-40"
           style={{
             backgroundImage:
-              'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+              'radial-gradient(circle, rgba(255,255,255,0.10) 1px, transparent 1px)',
             backgroundSize: '44px 44px',
           }}
         />
 
-        {/* Morphing blob 1 – amber/orange, top-right */}
+        {/* Primary orb – orange, top-right */}
         <div
-          className="animate-blob animate-orb-1 absolute -top-[20%] -right-[10%] w-[800px] h-[800px]"
+          className="animate-blob animate-orb-1 absolute -top-[15%] -right-[5%] w-[700px] h-[700px]"
           style={{
-            background: 'radial-gradient(circle at 40% 40%, rgba(229,106,26,0.32) 0%, rgba(229,106,26,0.08) 50%, transparent 75%)',
-            filter: 'blur(60px)',
-          }}
-        />
-
-        {/* Morphing blob 2 – deep amber, bottom-left */}
-        <div
-          className="animate-blob-b animate-orb-2 absolute -bottom-[25%] -left-[15%] w-[900px] h-[900px]"
-          style={{
-            background: 'radial-gradient(circle at 60% 60%, rgba(180,60,0,0.20) 0%, rgba(229,106,26,0.07) 50%, transparent 75%)',
+            background: 'radial-gradient(circle at 40% 40%, rgba(229,106,26,0.20) 0%, rgba(229,106,26,0.05) 55%, transparent 75%)',
             filter: 'blur(80px)',
-          }}
-        />
-
-        {/* Morphing blob 3 – purple, center */}
-        <div
-          className="animate-blob animate-orb-3 absolute top-[25%] left-[30%] w-[600px] h-[600px]"
-          style={{
-            background: 'radial-gradient(circle at 50% 50%, rgba(139,92,246,0.14) 0%, transparent 70%)',
-            filter: 'blur(90px)',
-            animationDelay: '-5s',
           }}
         />
 
