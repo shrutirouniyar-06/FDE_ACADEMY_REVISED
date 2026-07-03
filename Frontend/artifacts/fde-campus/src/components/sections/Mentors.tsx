@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight, ExternalLink, Mail } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Mail } from 'lucide-react';
 import { MENTORS } from '@/data/mock';
 
 export function Mentors() {
@@ -99,10 +99,10 @@ export function Mentors() {
                         href={mentor.gloProfile}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white hover:scale-110 hover:bg-primary/90 shadow-lg transition-all duration-300"
+                        className="w-11 h-11 rounded-full bg-white flex items-center justify-center hover:scale-110 shadow-lg transition-all duration-300 p-2"
                         aria-label={`${mentor.name}'s Glo profile`}
                       >
-                        <ExternalLink className="w-5 h-5" />
+                        <img src="/images/gl-logo.png" alt="GlobalLogic" className="w-full h-full object-contain" />
                       </a>
                     </div>
                     
