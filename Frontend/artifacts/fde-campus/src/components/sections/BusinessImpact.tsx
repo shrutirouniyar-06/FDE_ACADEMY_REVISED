@@ -42,7 +42,7 @@ export function BusinessImpact() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className="py-32 bg-[#0a0a0b]">
+    <section ref={ref} className="py-32 bg-[#0A0A0B]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
         {/* Section header */}

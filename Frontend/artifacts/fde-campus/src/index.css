@@ -242,6 +242,8 @@
 .light .bg-\[\#17181D\]  { background-color: var(--surface-2) !important; }
 .light .bg-\[\#202229\]  { background-color: var(--surface-overlay) !important; }
 .light .bg-\[\#0A0A0B\]  { background-color: var(--surface-footer) !important; }
+.light .bg-\[\#0a0a0b\]  { background-color: var(--surface-footer) !important; }
+.light .bg-\[\#0e0e10\]  { background-color: var(--surface-1) !important; }
 
 /* Glass card light mode */
 .light .glass-card {
@@ -262,6 +264,7 @@
 .light .group:hover .group-hover\:text-white { color: var(--text-heading); }
 .light .border-white\/10 { border-color: rgba(0,0,0,0.1); }
 .light .border-white\/5  { border-color: rgba(0,0,0,0.05); }
+.light .border-white\/6  { border-color: rgba(0,0,0,0.06); }
 .light .bg-white\/5  { background-color: rgba(0,0,0,0.04); }
 .light .bg-white\/10 { background-color: rgba(0,0,0,0.07); }
 .light .bg-white\/20 { background-color: rgba(0,0,0,0.12); }

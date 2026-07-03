@@ -56,7 +56,7 @@ export function Stats() {
   ];
 
   return (
-    <section ref={ref} className="relative py-24 bg-[#0a0a0b] border-y border-white/5 overflow-hidden">
+    <section ref={ref} className="relative py-24 bg-[#0A0A0B] border-y border-white/5 overflow-hidden">
       {/* Sweeping gradient line at top */}
       <motion.div
         initial={{ scaleX: 0 }}

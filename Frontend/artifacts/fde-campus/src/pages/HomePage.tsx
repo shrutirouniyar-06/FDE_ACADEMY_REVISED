@@ -13,8 +13,6 @@ import { LearningActivities } from '@/components/sections/LearningActivities';
 import { Mentors } from '@/components/sections/Mentors';
 import { LearningTimeline } from '@/components/sections/LearningTimeline';
 import { EnterpriseProjects } from '@/components/sections/EnterpriseProjects';
-import { CareerRoadmaps } from '@/components/sections/CareerRoadmaps';
-import { SalaryGrowth } from '@/components/sections/SalaryGrowth';
 import { SuccessStories } from '@/components/sections/SuccessStories';
 import { Certification } from '@/components/sections/Certification';
 import { FAQ } from '@/components/sections/FAQ';
@@ -47,8 +45,6 @@ export function HomePage() {
         <Mentors />
         <LearningTimeline />
         <EnterpriseProjects />
-        <CareerRoadmaps />
-        <SalaryGrowth />
         <SuccessStories />
         <Certification />
         <FAQ />

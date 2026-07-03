@@ -42,7 +42,7 @@ export function MarqueeStrip({ variant = 'default' }: { variant?: 'default' | 'a
 
   const bgClass = variant === 'accent'
     ? 'bg-primary/5 border-y border-primary/20'
-    : 'bg-[#0e0e10] border-y border-white/6';
+    : 'bg-[#0F0F10] border-y border-white/6';
 
   return (
     <motion.div

@@ -1,57 +1,66 @@
 export const MENTORS = [
   {
     id: '1',
-    name: 'Arjun Mehta',
+    name: 'Nisha Mukherjee',
     role: 'Principal Engineer',
     experience: '14y exp',
     expertise: ['AI/ML Architecture', 'System Design', 'Cloud'],
     image: '/images/mentor-1.jpg',
-    email: 'arjun.mehta@globallogic.com'
+    email: 'nisha.mukherjee@globallogic.com'
   },
   {
     id: '2',
-    name: 'Priya Sharma',
+    name: 'Chitrangda Visen',
     role: 'Solutions Director',
     experience: '16y exp',
     expertise: ['Enterprise Consulting', 'Strategy', 'Delivery'],
     image: '/images/mentor-2.jpg',
-    email: 'priya.sharma@globallogic.com'
+    email: 'chitrangda.visen@globallogic.com'
   },
   {
     id: '3',
-    name: 'David Chen',
+    name: 'Sai Dabbiru',
     role: 'Cloud Architect',
     experience: '12y exp',
     expertise: ['AWS/GCP/Azure', 'Kubernetes', 'DevOps'],
     image: '/images/mentor-3.jpg',
-    email: 'david.chen@globallogic.com'
+    email: 'sai.dabbiru@globallogic.com'
   },
   {
     id: '4',
-    name: 'Sarah Mitchell',
+    name: 'Krishna C',
     role: 'FDE Lead',
     experience: '10y exp',
     expertise: ['GenAI Engineering', 'RAG', 'LLMs'],
     image: '/images/mentor-4.jpg',
-    email: 'sarah.mitchell@globallogic.com'
+    email: 'krishna.c@globallogic.com'
   },
   {
     id: '5',
-    name: 'Rahul Gupta',
+    name: 'Asfiya Khan',
     role: 'Technology VP',
     experience: '18y exp',
     expertise: ['Digital Transformation', 'Leadership', 'Agile'],
     image: '/images/mentor-5.jpg',
-    email: 'rahul.gupta@globallogic.com'
+    email: 'asfiya.khan@globallogic.com'
   },
   {
     id: '6',
-    name: 'Emily Watson',
+    name: 'Raksha Bhahadur',
     role: 'Principal Consultant',
     experience: '13y exp',
     expertise: ['Agile Delivery', 'Product Mgt', 'Stakeholders'],
     image: '/images/mentor-6.jpg',
-    email: 'emily.watson@globallogic.com'
+    email: 'raksha.bhahadur@globallogic.com'
+  },
+  {
+    id: '7',
+    name: 'Kalpana SP',
+    role: 'Engagement Manager',
+    experience: '15y exp',
+    expertise: ['Customer Success', 'Program Management', 'Consulting'],
+    image: '/images/mentor-7.png',
+    email: 'kalpana.sp@globallogic.com'
   }
 ];
 

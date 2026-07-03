@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "F8T0joJHjF7zOQF0imTns"
+uri = "file://Frontend/artifacts/fde-campus/public/images/mentor-7.png"
+type = "image"
+title = "generated_image"
