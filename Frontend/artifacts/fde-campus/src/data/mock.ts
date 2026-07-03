@@ -2,64 +2,64 @@ export const MENTORS = [
   {
     id: '1',
     name: 'Nisha Mukherjee',
-    role: 'Principal Engineer',
-    experience: '14y exp',
+    role: 'Senior Manager',
+    experience: '12y exp',
     expertise: ['AI/ML Architecture', 'System Design', 'Cloud'],
-    image: '/images/mentor-1.jpg',
+    image: '/images/mentor-nisha.png',
     email: 'nisha.mukherjee@globallogic.com'
   },
   {
     id: '2',
     name: 'Chitrangda Visen',
-    role: 'Solutions Director',
-    experience: '16y exp',
+    role: 'Manager',
+    experience: '9y exp',
     expertise: ['Enterprise Consulting', 'Strategy', 'Delivery'],
-    image: '/images/mentor-2.jpg',
+    image: '/images/mentor-chitrangda.png',
     email: 'chitrangda.visen@globallogic.com'
   },
   {
     id: '3',
     name: 'Sai Dabbiru',
-    role: 'Cloud Architect',
-    experience: '12y exp',
+    role: 'Deputy Manager',
+    experience: '7y exp',
     expertise: ['AWS/GCP/Azure', 'Kubernetes', 'DevOps'],
-    image: '/images/mentor-3.jpg',
+    image: '/images/mentor-sai.png',
     email: 'sai.dabbiru@globallogic.com'
   },
   {
     id: '4',
     name: 'Krishna C',
-    role: 'FDE Lead',
-    experience: '10y exp',
+    role: 'Assistant Manager',
+    experience: '5y exp',
     expertise: ['GenAI Engineering', 'RAG', 'LLMs'],
-    image: '/images/mentor-4.jpg',
+    image: '/images/mentor-krishna.png',
     email: 'krishna.c@globallogic.com'
   },
   {
     id: '5',
     name: 'Asfiya Khan',
-    role: 'Technology VP',
-    experience: '18y exp',
+    role: 'Deputy Manager',
+    experience: '7y exp',
     expertise: ['Digital Transformation', 'Leadership', 'Agile'],
-    image: '/images/mentor-5.jpg',
+    image: '/images/mentor-asfiya.png',
     email: 'asfiya.khan@globallogic.com'
   },
   {
     id: '6',
-    name: 'Raksha Bhahadur',
-    role: 'Principal Consultant',
-    experience: '13y exp',
+    name: 'Raksha Bahadur',
+    role: 'Deputy Manager',
+    experience: '7y exp',
     expertise: ['Agile Delivery', 'Product Mgt', 'Stakeholders'],
-    image: '/images/mentor-6.jpg',
-    email: 'raksha.bhahadur@globallogic.com'
+    image: '/images/mentor-raksha.png',
+    email: 'raksha.bahadur@globallogic.com'
   },
   {
     id: '7',
     name: 'Kalpana SP',
-    role: 'Engagement Manager',
-    experience: '15y exp',
+    role: 'Senior Manager',
+    experience: '12y exp',
     expertise: ['Customer Success', 'Program Management', 'Consulting'],
-    image: '/images/mentor-7.png',
+    image: '/images/mentor-kalpana.png',
     email: 'kalpana.sp@globallogic.com'
   }
 ];
