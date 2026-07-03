@@ -30,7 +30,7 @@ export function Certification() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full" />
                 <div className="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-tr-full" />
                 
-                <h4 className="font-display font-bold text-2xl text-white mb-2 tracking-widest uppercase">FDE Campus</h4>
+                <h4 className="font-display font-bold text-2xl text-white mb-2 tracking-widest uppercase">FDE Academy</h4>
                 <p className="text-primary text-sm font-semibold tracking-widest mb-12">By GlobalLogic</p>
                 
                 <p className="text-muted-foreground italic mb-4">This certifies that</p>
@@ -64,7 +64,7 @@ export function Certification() {
             <h2 className="text-primary font-semibold tracking-wide uppercase mb-3">Certification</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">A Credential That Matters</h3>
             <p className="text-xl text-muted-foreground mb-12">
-              Graduating from FDE Campus is not easy. That's why this certificate is recognized by top employers as a guarantee of both technical excellence and business acumen.
+              Graduating from FDE Academy is not easy. That's why this certificate is recognized by top employers as a guarantee of both technical excellence and business acumen.
             </p>
             
             <div className="grid sm:grid-cols-2 gap-6">

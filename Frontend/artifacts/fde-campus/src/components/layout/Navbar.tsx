@@ -65,7 +65,7 @@ export function Navbar() {
               />
               <div className="flex flex-col">
                 <span className="text-xl font-display font-bold tracking-tighter text-foreground group-hover:text-primary transition-colors leading-tight">
-                  FDE Campus
+                  FDE Academy
                 </span>
                 <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-semibold leading-tight">
                   by GlobalLogic

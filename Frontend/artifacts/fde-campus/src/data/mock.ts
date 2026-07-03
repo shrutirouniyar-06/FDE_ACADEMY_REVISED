@@ -125,7 +125,7 @@ export const SUCCESS_STORIES = [
     name: 'Anita Desai',
     role: 'AI Solutions Architect @ TCS',
     previousRole: 'Data Scientist',
-    quote: 'Moving from model building to solving actual business problems was the hardest leap. FDE Campus provided the exact bridge I needed.',
+    quote: 'Moving from model building to solving actual business problems was the hardest leap. FDE Academy provided the exact bridge I needed.',
     avatar: '/images/mentor-2.jpg'
   },
   {

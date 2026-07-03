@@ -85,7 +85,7 @@ export function SideNav({ open, onClose }: SideNavProps) {
               <div className="flex items-center gap-3">
                 <img src="/images/gl-logo.png" alt="GlobalLogic" className="w-8 h-8 rounded-lg object-cover" />
                 <div>
-                  <div className="text-sm font-display font-bold text-foreground leading-tight">FDE Campus</div>
+                  <div className="text-sm font-display font-bold text-foreground leading-tight">FDE Academy</div>
                   <div className="text-[10px] text-primary uppercase tracking-widest font-semibold">by GlobalLogic</div>
                 </div>
               </div>

@@ -21,6 +21,8 @@ import { FAQ } from '@/components/sections/FAQ';
 import { BlogPreview } from '@/components/sections/BlogPreview';
 import { EventsPreview } from '@/components/sections/EventsPreview';
 import { ContactSection } from '@/components/sections/ContactSection';
+import { SignatureActivities } from '@/components/sections/SignatureActivities';
+import { BusinessImpact } from '@/components/sections/BusinessImpact';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 export function HomePage() {
@@ -38,6 +40,8 @@ export function HomePage() {
         <ProgramsSection />
         <ProgramComparison />
         <Curriculum />
+        <SignatureActivities />
+        <BusinessImpact />
         <CapabilityPillars />
         <LearningActivities />
         <Mentors />

@@ -34,7 +34,7 @@ export function FAQ() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Frequently Asked Questions</h2>
-          <p className="text-xl text-muted-foreground mb-8">Everything you need to know about the FDE Campus programs.</p>
+          <p className="text-xl text-muted-foreground mb-8">Everything you need to know about the FDE Academy programs.</p>
           
           <div className="relative max-w-md mx-auto">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />

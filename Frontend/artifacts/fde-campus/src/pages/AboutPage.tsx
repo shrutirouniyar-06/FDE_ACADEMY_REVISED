@@ -19,7 +19,7 @@ export function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               className="max-w-3xl"
             >
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">About FDE Campus</h1>
+              <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">About FDE Academy</h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 We are on a mission to build the next generation of hybrid technologists. Engineers who don't just write code, but understand how to deploy AI to solve complex business challenges.
               </p>

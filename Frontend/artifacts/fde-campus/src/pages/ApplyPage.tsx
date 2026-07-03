@@ -267,7 +267,7 @@ export function ApplyPage() {
                         onChange={(e) => setTermsAccepted(e.target.checked)}
                       />
                       <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                        I confirm that the information provided is accurate. I understand that the FDE Campus team will review my application and contact me regarding next steps.
+                        I confirm that the information provided is accurate. I understand that the FDE Academy team will review my application and contact me regarding next steps.
                       </label>
                     </div>
 
@@ -299,7 +299,7 @@ export function ApplyPage() {
               </div>
               <h2 className="text-4xl font-display font-bold text-white mb-4">Application Submitted!</h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
-                Thank you for applying to the FDE Campus. Our admissions team will review your profile and reach out within 48 hours.
+                Thank you for applying to the FDE Academy. Our admissions team will review your profile and reach out within 48 hours.
               </p>
               <button 
                 onClick={() => window.location.href = '/'}

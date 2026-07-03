@@ -9,7 +9,7 @@ export function Footer() {
         <div className="lg:col-span-2 flex flex-col gap-6">
           <Link href="/" className="flex flex-col group">
             <span className="text-3xl font-display font-bold tracking-tighter text-white">
-              FDE Campus
+              FDE Academy
             </span>
             <span className="text-sm text-primary uppercase tracking-widest font-semibold mt-1">
               by GlobalLogic
@@ -68,7 +68,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-muted-foreground">
-          © 2025 FDE Campus. An AI-First Learning Initiative by GlobalLogic.
+          © 2025 FDE Academy. An AI-First Learning Initiative by GlobalLogic.
         </p>
         <div className="flex items-center gap-6">
           <a href="#" className="text-sm text-muted-foreground hover:text-white transition-colors">Privacy Policy</a>
